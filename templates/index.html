@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポップコーン専門店 メニュー</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>ポップコーン専門店</h1>
+        <p>文化祭限定オープン!</p>
+    </div>
+
+    <div class="main-message">
+        <h2><span class="icon">✨</span>できたて熱々のポップコーン！<span class="icon">🍿</span></h2>
+        <p>香ばしく美味しいポップコーンをその場で調理してお届けします</p>
+    </div>
+
+    <div class="size-options">
+        <div class="size-box regular">
+            <h3><span class="trash-icon">🗑️</span>レギュラーサイズ (小)</h3>
+            <p>ちょっと食べたい方におすすめ</p>
+            <div class="price">¥300</div>
+            <p>お好きなフレーバーを1種類選べます</p>
+        </div>
+
+        <div class="size-box large">
+            <h3><span class="trash-icon">🗑️</span>ラージサイズ (大)</h3>
+            <p>たっぷり食べたい方におすすめ</p>
+            <div class="price">¥500</div>
+            <p>お好きなフレーバーを1種類選べます</p>
+        </div>
+    </div>
+
+    <div class="flavor-section">
+        <h2>フレーバー一覧</h2>
+        <p class="flavor-intro">下記のフレーバーからお好きなものをお選びください</p>
+
+        <div class="flavor-grid">
+            <div class="flavor-item">
+                <div class="flavor-image">画像</div>
+                <div class="flavor-details">
+                    <h4>バター</h4>
+                    <p>香ばしいバターの香りが広がる定番の味</p>
+                </div>
+            </div>
+            <div class="flavor-item">
+                <div class="flavor-image">画像</div>
+                <div class="flavor-details">
+                    <h4>キャラメル</h4>
+                    <p>甘くて香ばしい大人気のキャラメル味</p>
+                </div>
+            </div>
+            <div class="flavor-item">
+                <div class="flavor-image">画像</div>
+                <div class="flavor-details">
+                    <h4>チーズ</h4>
+                    <p>濃厚なチーズの風味がクセになる</p>
+                </div>
+            </div>
+            <div class="flavor-item">
+                <div class="flavor-image">画像</div>
+                <div class="flavor-details">
+                    <h4>塩</h4>
+                    <p>シンプルで飽きのこない定番味</p>
+                </div>
+            </div>
+            <div class="flavor-item">
+                <div class="flavor-image">画像</div>
+                <div class="flavor-details">
+                    <h4>コンソメ</h4>
+                    <p>やみつきになる旨味たっぷりコンソメ</p>
+                </div>
+            </div>
+            <div class="flavor-item">
+                <div class="flavor-image">画像</div>
+                <div class="flavor-details">
+                    <h4>ハニーバター</h4>
+                    <p>甘さと塩気の絶妙なバランス</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <h3>ご案内</h3>
+        <div class="info-grid">
+            <div class="info-item">
+                <span class="info-icon">⏰</span><p><strong>営業時間:</strong> 10:00〜16:00</p>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">📍</span><p><strong>場所:</strong> 校舎 2階 調理室前</p>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">❗</span><p>できたての提供のため少々お待たせいただく場合があります</p>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">⚠️</span><p>売り切れの際はご容赦ください</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
