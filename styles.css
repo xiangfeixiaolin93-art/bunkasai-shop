@@ -135,7 +135,7 @@ body {
 }
 .flavor-image {
     background-color: #cddc39; /* 画像のプレースホルダー色（黄緑） */
-    height: 120px;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -198,4 +198,5 @@ body {
     .flavor-grid {
         grid-template-columns: repeat(2, 1fr); /* スマホでは2列にする */
     }
+
 }
