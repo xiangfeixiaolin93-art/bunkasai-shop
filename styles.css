@@ -1,0 +1,201 @@
+/* リセットと基本設定 */
+body {
+    font-family: 'Hiragino Sans', 'ヒラギノ角ゴ ProN', 'Meiryo', sans-serif;
+    background-color: #ffe0b2; /* 全体の背景色（薄いオレンジ系） */
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ヘッダー */
+.header {
+    text-align: center;
+    background-color: #ff5722; /* 赤みがかったオレンジ */
+    color: white;
+    padding: 15px 0;
+    border-radius: 5px 5px 0 0;
+}
+.header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #ff9800;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.header p {
+    margin: 5px 0 0;
+    font-size: 1.1em;
+}
+
+/* メインメッセージ */
+.main-message {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    border: 2px solid #ff9800;
+    background-color: #fffde7; /* 非常に薄い黄色 */
+    border-radius: 5px;
+}
+.main-message h2 {
+    font-size: 1.5em;
+    color: #ff9800;
+    margin: 0 0 5px 0;
+}
+.main-message p {
+    margin: 0;
+    font-size: 0.9em;
+}
+.icon {
+    color: #ff9800;
+    font-size: 1.2em;
+    margin: 0 5px;
+}
+
+/* サイズ選択 */
+.size-options {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.size-box {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border: 4px solid #ff9800;
+    border-radius: 5px;
+    background-color: #fff8e1;
+}
+/* 個別の枠の色 */
+.size-box.regular {
+    border-color: #ffc107; /* レギュラーは黄色系 */
+}
+.size-box.large {
+    border-color: #f44336; /* ラージは赤系 */
+}
+.size-box h3 {
+    font-size: 1.4em;
+    margin: 0 0 5px 0;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ccc;
+}
+.size-box p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+.price {
+    font-size: 2.5em;
+    color: #d84315;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.trash-icon {
+    color: #757575;
+    font-size: 1.2em;
+    margin-right: 5px;
+}
+
+/* フレーバー一覧 */
+.flavor-section {
+    padding: 20px;
+    background-color: #fff;
+}
+.flavor-section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #ff5722;
+}
+.flavor-intro {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    padding: 10px 0;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+}
+.flavor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.flavor-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+}
+.flavor-image {
+    background-color: #cddc39; /* 画像のプレースホルダー色（黄緑） */
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.flavor-details {
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+.flavor-details h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
+    color: #d84315;
+}
+.flavor-details p {
+    margin: 0;
+    font-size: 0.85em;
+    color: #555;
+}
+
+/* ご案内 */
+.info-section {
+    background-color: #fff3e0; /* 薄いオレンジ */
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 30px;
+}
+.info-section h3 {
+    text-align: center;
+    margin-top: 0;
+    color: #d84315;
+    font-size: 1.5em;
+    border-bottom: 1px dashed #ff9800;
+    padding-bottom: 5px;
+}
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    font-size: 0.9em;
+}
+.info-item {
+    display: flex;
+    align-items: center;
+}
+.info-icon {
+    color: #f44336; /* 赤 */
+    margin-right: 5px;
+}
+
+/* スマホ対応 (オプション) */
+@media (max-width: 600px) {
+    .size-options, .flavor-grid, .info-grid {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+    .flavor-grid {
+        grid-template-columns: repeat(2, 1fr); /* スマホでは2列にする */
+    }
+}
