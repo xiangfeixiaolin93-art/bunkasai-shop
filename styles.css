@@ -133,16 +133,16 @@ body {
     overflow: hidden;
     text-align: center;
 }
+/* ★★★ 画像スタイルをimgタグ（.flavor-imageクラス）用に修正 ★★★ */
 .flavor-image {
-    background-color: #cddc39; /* 画像のプレースホルダー色（黄緑） */
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #333;
-    font-size: 1.5em;
-    font-weight: bold;
+    width: 100%;       /* 親要素（.flavor-item）の幅いっぱいを使う */
+    height: 180px;     /* 高さを固定してトリミング（必要に応じて調整） */
+    object-fit: cover; /* 画像の縦横比を保ったまま、指定サイズに合わせてトリミング */
+    background-color: #cddc39; /* 画像のプレースホルダー色（残す） */
+    display: block;    /* インライン要素の余白対策 */
 }
+/* ★★★ .flavor-imageから画像を表示するための不要なFlexプロパティを削除しました ★★★ */
+
 .flavor-details {
     padding: 10px;
     background-color: #f9f9f9;
@@ -189,14 +189,25 @@ body {
     margin-right: 5px;
 }
 
-/* スマホ対応 (オプション) */
+/* スマホ対応 (メディアクエリ) */
+/* 画面幅が600px以下になったらレイアウトを調整 */
 @media (max-width: 600px) {
-    .size-options, .flavor-grid, .info-grid {
+    /* サイズ選択とご案内を縦並びにする */
+    .size-options, .info-grid {
         grid-template-columns: 1fr;
         flex-direction: column;
     }
+    /* フレーバーはスマホでも見やすいように2列にする */
     .flavor-grid {
-        grid-template-columns: repeat(2, 1fr); /* スマホでは2列にする */
+        grid-template-columns: repeat(2, 1fr); 
     }
-
+    /* スマホで余白が過剰にならないように調整 */
+    body {
+        padding: 10px; 
+    }
+    /* 画像の高さをスマホ向けに調整 */
+    .flavor-image {
+        height: 120px; 
+    }
 }
+/* ★★★ ここにあった余分な閉じ括弧を削除しました ★★★ */
