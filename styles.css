@@ -136,7 +136,7 @@ body {
 /* ★★★ 画像スタイルをimgタグ（.flavor-imageクラス）用に修正 ★★★ */
 .flavor-image {
     width: 100%;       /* 親要素（.flavor-item）の幅いっぱいを使う */
-    height: 180px;     /* 高さを固定してトリミング（必要に応じて調整） */
+    height: 300px;     /* 高さを固定してトリミング（必要に応じて調整） */
     object-fit: cover; /* 画像の縦横比を保ったまま、指定サイズに合わせてトリミング */
     background-color: #cddc39; /* 画像のプレースホルダー色（残す） */
     display: block;    /* インライン要素の余白対策 */
